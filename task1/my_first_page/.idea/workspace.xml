@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="17c54281-6186-4697-abe6-64335d22c6ab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../task1.1/ones_more" beforeDir="false" afterPath="$PROJECT_DIR$/../../task1.1/ones_more" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../about-me" beforeDir="false" afterPath="$PROJECT_DIR$/../about-me" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +93,7 @@
       <workItem from="1615746990412" duration="18000" />
       <workItem from="1615783951735" duration="2680000" />
       <workItem from="1615795729604" duration="467000" />
-      <workItem from="1615796368130" duration="852000" />
+      <workItem from="1615796368130" duration="1447000" />
     </task>
     <servers />
   </component>
