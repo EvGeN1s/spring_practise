@@ -2,8 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17c54281-6186-4697-abe6-64335d22c6ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../about_me/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/.env.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/bin/console" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/bin/phpunit" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/bundles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/cache.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/dev/debug.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/dev/monolog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/dev/web_profiler.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/doctrine.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/doctrine_migrations.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/framework.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/mailer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/notifier.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/prod/deprecations.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/prod/doctrine.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/prod/monolog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/prod/routing.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/routing.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/security.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/sensio_framework_extra.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/test/framework.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/test/monolog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/test/twig.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/test/validator.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/test/web_profiler.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/translation.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/twig.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/packages/validator.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/preload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/routes.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/routes/annotations.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/routes/dev/framework.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/routes/dev/web_profiler.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/config/services.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/migrations/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/public/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/src/Controller/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/src/Entity/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/src/Kernel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/src/Repository/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/symfony.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/templates/base.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/tests/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../about_me/translations/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../task1.1/ones_more" beforeDir="false" afterPath="$PROJECT_DIR$/../../task1.1/ones_more" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../about-me" beforeDir="false" afterPath="$PROJECT_DIR$/../about-me" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +121,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../about_me" />
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -93,7 +141,7 @@
       <workItem from="1615746990412" duration="18000" />
       <workItem from="1615783951735" duration="2680000" />
       <workItem from="1615795729604" duration="467000" />
-      <workItem from="1615796368130" duration="1447000" />
+      <workItem from="1615796368130" duration="1649000" />
     </task>
     <servers />
   </component>
