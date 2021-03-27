@@ -18,4 +18,24 @@
     <h2>Зачем мне нужна весеняя практика</h2>
     <p>Я хочу получить новые знания и самое главное на основе этой базы решить реальную задачу</p>
     <a href="https://vk.com/efedoseev99">Моя страница</a>
+    <div class="images">
+        <div class="images_basketball">
+            <h3>Basketball</h3>
+            {% for url in urlsB %}
+                <img src="{{ url }}" alt="wasn't finded"/>
+            {% endfor %}
+        </div>
+        <div class="images_programming">
+            <h3>Programming</h3>
+            {% for url in urlsP %}
+                <img src="{{ url }}" alt="wasn't finded"/>
+            {% endfor %}
+        </div>
+        <div class="images_computer-gaming">
+            <h3>Computer gaming</h3>
+            {% for url in urlsC %}
+                <img src="{{ url }}" alt="wasn't finded"/>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
