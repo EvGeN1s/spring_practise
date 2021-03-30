@@ -14,16 +14,16 @@ class ImageProvider
   }
   public function getUrls(): array
   {
-      $urls = ImageSpider::find($this->hobbie);
+      $urls = $this->setUrls();
       shuffle($urls);
       $urls = array_slice($urls, 0, 5);
       return $urls;
   }
 
 
-//  public function getUrls(): array
-//  {
-//      return $this->;
-//  }
+  private function setUrls(): array
+ {
+      return ImageSpider::find($this -> hobbie);
+ }
 
 }
