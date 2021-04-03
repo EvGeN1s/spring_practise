@@ -20,7 +20,6 @@ class ImageProvider
       return $urls;
   }
 
-
   private function setUrls(): array
  {
       return ImageSpider::find($this -> hobbie);

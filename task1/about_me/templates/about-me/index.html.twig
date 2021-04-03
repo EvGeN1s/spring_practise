@@ -2,40 +2,50 @@
 {% block title %} Page about me  {% endblock %}
 
 {% block body %}
-    <h1>Cтраница обо мне</h1>
-    <img src="{{ asset('img/1.jpg') }}" alt="Титульное фото" height="180" width="150" />
-    <h2>Мои увлечения</h2>
-    <ul>
-        <li>Баскетбол</li>
-        <li>Программирование</li>
-        <li>Компьюьерные игры</li>
-    </ul>
-    <p>В баскетбол играю уже 4 года. За это время много чему научился. Принимал участие в различных соревнованиях. В школьные годы был капитаном команды</p>
-    <p>С программирование познакомился ещё в начальной школе на робототехнике, но на более осознаном уровне начал заниматься только в 10 классе</p>
-    <P>В компьютер начал играть с 1 класса. В классе 5 начал игарть в мултиплеерные игры. Было очень интересно получать новый опыт, становится лучше. Сейчас появился новый взгляд на игры: их устройство</P>
-    <h2>Поступление на ПС</h2>
-    <p>На ПС я поступил, чтобы получить фундаментальные зания о строение, архитектуре и разработке программ. Огромным плюсом этого направления является то, что большинство преподавателей программирования непосредственно разрабатывают программы в компаниях города</p>
-    <h2>Зачем мне нужна весеняя практика</h2>
-    <p>Я хочу получить новые знания и самое главное на основе этой базы решить реальную задачу</p>
-    <a href="https://vk.com/efedoseev99">Моя страница</a>
-    <div class="images">
-        <div class="images_basketball">
-            <h3>Basketball</h3>
-            {% for url in urlsB %}
-                <img src="{{ url }}" alt="wasn't finded"/>
-            {% endfor %}
-        </div>
-        <div class="images_programming">
-            <h3>Programming</h3>
-            {% for url in urlsP %}
-                <img src="{{ url }}" alt="wasn't finded"/>
-            {% endfor %}
-        </div>
-        <div class="images_computer-gaming">
-            <h3>Computer gaming</h3>
-            {% for url in urlsC %}
-                <img src="{{ url }}" alt="wasn't finded"/>
-            {% endfor %}
-        </div>
+    <div class="main">
+      <h1 class="main__about">Cтраница обо мне</h1>
+      <img src="img/1.jpg" alt="Титульное фото" height="180" width="150" class="main__photo" />
+      <h2 class="main__list-header">Мои увлечения</h2>
+      <ul class="main__list list">
+          <li class="list__item">Баскетбол</li>
+          <li class="list__item">Программирование</li>
+          <li class="list__item">Компьюьерные игры</li>
+      </ul>
+      <p class="main__message">В баскетбол играю уже 4 года. За это время много чему научился. Принимал участие в различных соревнованиях. В школьные годы был капитаном команды</p>
+      <p class="main__message">С программирование познакомился ещё в начальной школе на робототехнике, но на более осознаном уровне начал заниматься только в 10 классе</p>
+      <p class="main__message">В компьютер начал играть с 1 класса. В классе 5 начал играть в мултиплеерные игры. Было очень интересно получать новый опыт, становится лучше. Сейчас появился новый взгляд на игры: их устройство</p>
+      <h2 class="main__theme-header">Поступление на ПС</h2>
+      <p class="main__message"> На ПС я поступил, чтобы получить фундаментальные зания о строение, архитектуре и разработке программ. Огромным плюсом этого направления является то, что большинство преподавателей программирования непосредственно разрабатывают программы в компаниях города</p>
+      <h2 main__theme-header>Зачем мне нужна весеняя практика</h2>
+      <p class="main__message">  Я хочу получить новые знания и самое главное на основе этой базы решить реальную задачу</p>
+      <a href="https://vk.com/efedoseev99" class="">Моя страница</a>
+      <div class="main__galery galery">
+          <h3 class="galery__name">Basketball</h3>
+          <div class="galery__images images">
+              <ul class="images__slidewrapper slidewrapper">
+              {% for url in urlsB %}
+                <li class="slidewrapper__slide slide"><img src="{{ url }}" alt="wasn't finded" class="slide__photo"/></li>
+              {% endfor %}
+              </ul>
+          </div>
+      </div>
+      <div class="main__galery galery">
+          <div class="galery__images images">
+              <h3>Programming</h3>
+              <ul>
+              {% for url in urlsP %}
+                  <li><img src="{{ url }}" alt="wasn't finded" class="images__image"/></li>
+              {% endfor %}
+              </ul>
+          </div>
+          <div class="galery__images images">
+              <h3>Computer gaming</h3>
+              <ul>
+              {% for url in urlsC %}
+                  <li><img src="{{ url }}" alt="wasn't finded" class="images__image"/></li>
+              {% endfor %}
+              </ul>
+          </div>
+      </div>
     </div>
 {% endblock %}

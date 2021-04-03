@@ -1,0 +1,38 @@
+@import "./slider/slider.css";
+.main
+{
+    width: 100%;
+}
+
+.main__about
+{
+    font: 32px "Georgia";
+}
+
+.main__photo
+{
+    width: 150px;
+}
+
+.main__list-header
+{
+  font: 16px/32px "Georgia";
+}
+
+.list__item
+{
+
+}
+
+.main__message
+{
+
+}
+
+.main__theme-header
+{
+
+}
+
+
+
