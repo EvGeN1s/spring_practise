@@ -1,35 +1,47 @@
-import './about_me.css';
+import '../about_me.css';
 import $ from 'jquery';
 
-var slideNow = 1;
-var slideCount = $('.slidewrapper_1').children().length;
-var slideInterval = 5000;
-var navBtnId = 0;
-var translateWidth = 0;
 
-$(document).ready(function() {
-    var switchInterval = setInterval(nextSlide, slideInterval);
+class Slider
+{
+    constructor(slidewrapper,  viewport, nextBtn, prevBtn, slideNavBtn)
+    {
+        this.slidewrapper = slidewrapper;
+        this.viewport = viewport;
+        this.nextBtn = nextBtn;
+        this.slideNavBtn = slideNavBtn;
+    }
 
-    $('.images_1').hover(function() {
+    slideNow = 1;
+    slideCount = $(this.slidewrapper).children().length;
+    slideInterval = 3000;
+    navBtnId = 0;
+  //  translateWidth = 0;
+/*
+
+    $(document).ready(function() {
+    var switchInterval = setInterval(nextSlide, this.slideInterval);
+
+    $('.images').hover(function() {
         clearInterval(switchInterval);
     }, function() {
-        switchInterval = setInterval(nextSlide, slideInterval);
+        switchInterval = setInterval(nextSlide, this.slideInterval);
     });
 
-    $('.next-btn_1').click(function() {
+    $('.next-btn').click(function() {
         nextSlide();
     });
 
-    $('.prev-btn_1').click(function() {
+    $('.prev-btn').click(function() {
         prevSlide();
     });
 
-    $('.slide-nav-btn_1').click(function() {
+    $('.slide-nav-btn').click(function() {
         navBtnId = $(this).index();
 
         if (navBtnId + 1 != slideNow) {
-            translateWidth = -$('.images_1').width() * (navBtnId);
-            $('.slidewrapper_1').css({
+            translateWidth = -$('.images').width() * (navBtnId);
+            $('.slidewrapper').css({
                 'transform': 'translate(' + translateWidth + 'px, 0)',
                 '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
                 '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
@@ -40,13 +52,24 @@ $(document).ready(function() {
 });
 
 
+
+
+
+
+}
+
+
+
+
+
+
 function nextSlide() {
     if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
-        $('.slidewrapper_1').css('transform', 'translate(0, 0)');
+        $('.slidewrapper').css('transform', 'translate(0, 0)');
         slideNow = 1;
     } else {
-        translateWidth = -$('.images_1').width() * (slideNow);
-        $('.slidewrapper_1').css({
+        translateWidth = -$('.images').width() * (slideNow);
+        $('.slidewrapper').css({
             'transform': 'translate(' + translateWidth + 'px, 0)',
             '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
             '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
@@ -55,23 +78,22 @@ function nextSlide() {
     }
 }
 
-function prevSlide()
-{
+function prevSlide() {
     if (slideNow == 1 || slideNow <= 0 || slideNow > slideCount) {
-        translateWidth = -$('.images_1').width() * (slideCount - 1);
-        $('.slidewrapper_1').css({
+        translateWidth = -$('.images').width() * (slideCount - 1);
+        $('.slidewrapper').css({
             'transform': 'translate(' + translateWidth + 'px, 0)',
             '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
             '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
         });
         slideNow = slideCount;
     } else {
-        translateWidth = -$('.images_1').width() * (slideNow - 2);
-        $('.slidewrapper_1').css({
+        translateWidth = -$('.images').width() * (slideNow - 2);
+        $('.slidewrapper').css({
             'transform': 'translate(' + translateWidth + 'px, 0)',
             '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
             '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
         });
         slideNow--;
-    }
+    }*/
 }

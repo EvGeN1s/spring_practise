@@ -1,3 +1,7 @@
 page:
   path: /
   controller: App\Controller\PageController::page
+
+slider:
+  path: /slider
+  controller: App\Controller\SliderController::slider

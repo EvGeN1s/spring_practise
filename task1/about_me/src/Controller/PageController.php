@@ -6,21 +6,20 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-
-use App\Module\ImageProvider;
+use App\Modules\ImageProviderInterface;
+use App\Modules\ImageProvider;
 
 class PageController extends AbstractController
 {
-    public function page(): Response
+    public function page(ImageProviderInterface $imageProvider): Response
     {
-        $basketballImages = new ImageProvider('basketball');
-        $programmingImages = new ImageProvider('programming');
-        $computerGamingImages = new ImageProvider('computer-games');
+        $googleImageProvider = new ImageProvider;
+
 
         return $this->render('/about-me/index.html.twig',[
-            'urlsB' => $basketballImages -> getUrls(),
-            'urlsP' => $programmingImages -> getUrls(),
-            'urlsC' => $computerGamingImages -> getUrls()
+            'urlsB' => $googleImageProvider->getUrls('basketball'),
+            'urlsP' => $googleImageProvider->getUrls('programing'),
+            'urlsC' => $googleImageProvider->getUrls('computer-games')
         ]);
     }
 }

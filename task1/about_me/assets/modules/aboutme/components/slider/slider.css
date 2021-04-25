@@ -6,12 +6,13 @@ body
 
 .gallery
 {
-    width: 800px;
+    width: 1000px;
     margin: 0 auto;
     margin-top: 100px;
 }
 
-.images {
+.images
+{
     width: 100%;
     display: table;
     position: relative;
@@ -37,12 +38,6 @@ body
     -webkit-transition-timing-function: ease-in-out;
     -o-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
-}
-
-.slidewrapper, .slidewrapper__slide
-{
-    margin: 0;
-    padding: 0;
 }
 
 .slide

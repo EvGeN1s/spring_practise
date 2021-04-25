@@ -1,4 +1,6 @@
 {% extends 'base.html.twig' %}
+{% block styles %} <link rel="stylesheet" href="{{ asset('build/about_me.css') }}"> {% endblock %}
+{% block scripts %}{#<script type="text/javascript" src="{{ asset('build/Slider.js') }}"></script>#} {% endblock %}
 {% block title %} Page about me  {% endblock %}
 
 {% block body %}
@@ -19,33 +21,77 @@
       <h2 main__theme-header>Зачем мне нужна весеняя практика</h2>
       <p class="main__message">  Я хочу получить новые знания и самое главное на основе этой базы решить реальную задачу</p>
       <a href="https://vk.com/efedoseev99" class="">Моя страница</a>
-      <div class="main__galery galery">
-          <h3 class="galery__name">Basketball</h3>
-          <div class="galery__images images">
-              <ul class="images__slidewrapper slidewrapper">
-              {% for url in urlsB %}
-                <li class="slidewrapper__slide slide"><img src="{{ url }}" alt="wasn't finded" class="slide__photo"/></li>
-              {% endfor %}
-              </ul>
-          </div>
+    </div>
+    <div class="pictures">
+      <div class="pictures__galery galery">
+        <h3 class="galery__name">Basketball</h3>
+        <div class="galery__images images images_1">
+          <ul class="images__slidewrapper slidewrapper slidewrapper_1">
+          {% for url in urlsB %}
+            <li class="slidewrapper__slide slide"><img src="{{ url }}" alt="wasn't finded" class="slide__photo"/></li>
+          {% endfor %}
+          </ul>
+        </div>
+        <div class="prev-next-btns">
+          <div class="prev-btn prev-btn_1"></div>
+          <div class="next-btn next-btn_1"></div>
+        </div>
+        <ul class="nav-btns nav-btns_1">
+          <li class="slide-nav-btn"></li>
+          <li class="slide-nav-btn"></li>
+          <li class="slide-nav-btn"></li>
+          <li class="slide-nav-btn"></li>
+          <li class="slide-nav-btn"></li>
+        </ul>
       </div>
+
       <div class="main__galery galery">
-          <div class="galery__images images">
-              <h3>Programming</h3>
-              <ul>
-              {% for url in urlsP %}
-                  <li><img src="{{ url }}" alt="wasn't finded" class="images__image"/></li>
-              {% endfor %}
-              </ul>
-          </div>
-          <div class="galery__images images">
-              <h3>Computer gaming</h3>
-              <ul>
-              {% for url in urlsC %}
-                  <li><img src="{{ url }}" alt="wasn't finded" class="images__image"/></li>
-              {% endfor %}
-              </ul>
-          </div>
+        <h3 class="galery__name">Programming</h3>
+        <div class="galery__images images images_2">
+            <ul class="images__slidewrapper slidewrapper slidewrapper_2">
+            {% for url in urlsP %}
+                <li class="slidewrapper__slide slide"><img src="{{ url }}" alt="wasn't finded" class="slide__photo"/></li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="prev-next-btns">
+          <div class="prev-btn prev-btn_2"></div>
+          <div class="next-btn prev-btn_2"></div>
+        </div>
+        <ul class="nav-btns nav-btns_2">
+          <li class="slide-nav-btn"></li>
+          <li class="slide-nav-btn"></li>
+          <li class="slide-nav-btn"></li>
+          <li class="slide-nav-btn"></li>
+           <li class="slide-nav-btn"></li>
+        </ul>
+      </div>
+
+      <div class="main__galery galery">
+        <h3 class="galery__name">Computer gaming</h3>
+        <div class="galery__images images images_3">
+            <ul class="images__slidewrapper slidewrapper slidewrapper_3">
+            {% for url in urlsC %}
+                <li class="slidewrapper__slide slide"><img src="{{ url }}" alt="wasn't finded" class="slide__photo"/></li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="prev-next-btns">
+          <div class="prev-btn prev-btn_3"></div>
+          <div class="next-btn prev-btn_3"></div>
+        </div>
+        <ul class="nav-btns nav-btns_3">
+          <li class="slide-nav-btn"></li>
+          <li class="slide-nav-btn"></li>
+          <li class="slide-nav-btn"></li>
+          <li class="slide-nav-btn"></li>
+          <li class="slide-nav-btn"></li>
+        </ul>
       </div>
     </div>
+
+    <script type="text/javascript" src="{{ asset('build/about_me.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('build/vendors-node_modules_core-js_modules_web_timers_js-node_modules_jquery_dist_jquery_js.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('build/runtime.js') }}"></script>
+
 {% endblock %}
