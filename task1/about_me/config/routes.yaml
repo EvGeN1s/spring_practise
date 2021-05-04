@@ -1,6 +1,6 @@
 page:
   path: /
-  controller: App\Controller\PageController::page
+  controller: App\Controller\AboutMeController::page
 
 slider:
   path: /slider

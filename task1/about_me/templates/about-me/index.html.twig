@@ -1,29 +1,61 @@
 {% extends 'base.html.twig' %}
-{% block styles %} <link rel="stylesheet" href="{{ asset('build/about_me.css') }}"> {% endblock %}
-{% block scripts %}{#<script type="text/javascript" src="{{ asset('build/Slider.js') }}"></script>#} {% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ asset('build/about_me.css') }}"> {% endblock %}
+{% block scripts %}{# <script type="text/javascript" src="{{ asset('build/Slider.js') }}"></script> #} {% endblock %}
 {% block title %} Page about me  {% endblock %}
 
 {% block body %}
     <div class="main">
-      <h1 class="main__about">Cтраница обо мне</h1>
-      <img src="img/1.jpg" alt="Титульное фото" height="180" width="150" class="main__photo" />
-      <h2 class="main__list-header">Мои увлечения</h2>
-      <ul class="main__list list">
-          <li class="list__item">Баскетбол</li>
-          <li class="list__item">Программирование</li>
-          <li class="list__item">Компьюьерные игры</li>
-      </ul>
-      <p class="main__message">В баскетбол играю уже 4 года. За это время много чему научился. Принимал участие в различных соревнованиях. В школьные годы был капитаном команды</p>
-      <p class="main__message">С программирование познакомился ещё в начальной школе на робототехнике, но на более осознаном уровне начал заниматься только в 10 классе</p>
-      <p class="main__message">В компьютер начал играть с 1 класса. В классе 5 начал играть в мултиплеерные игры. Было очень интересно получать новый опыт, становится лучше. Сейчас появился новый взгляд на игры: их устройство</p>
-      <h2 class="main__theme-header">Поступление на ПС</h2>
-      <p class="main__message"> На ПС я поступил, чтобы получить фундаментальные зания о строение, архитектуре и разработке программ. Огромным плюсом этого направления является то, что большинство преподавателей программирования непосредственно разрабатывают программы в компаниях города</p>
-      <h2 main__theme-header>Зачем мне нужна весеняя практика</h2>
-      <p class="main__message">  Я хочу получить новые знания и самое главное на основе этой базы решить реальную задачу</p>
-      <a href="https://vk.com/efedoseev99" class="">Моя страница</a>
+        <h1 class="main__about">Cтраница обо мне</h1>
+        <img src="img/1.jpg" alt="Титульное фото" height="180" width="150" class="main__photo"/>
+        <h2 class="main__list-header">Мои увлечения</h2>
+        <ul class="main__list list">
+            <li class="list__item">Баскетбол</li>
+            <li class="list__item">Программирование</li>
+            <li class="list__item">Компьюьерные игры</li>
+        </ul>
+        <p class="main__message">В баскетбол играю уже 4 года. За это время много чему научился. Принимал участие в
+            различных соревнованиях. В школьные годы был капитаном команды</p>
+        <p class="main__message">С программирование познакомился ещё в начальной школе на робототехнике, но на более
+            осознаном уровне начал заниматься только в 10 классе</p>
+        <p class="main__message">В компьютер начал играть с 1 класса. В классе 5 начал играть в мултиплеерные игры. Было
+            очень интересно получать новый опыт, становится лучше. Сейчас появился новый взгляд на игры: их
+            устройство</p>
+        <h2 class="main__theme-header">Поступление на ПС</h2>
+        <p class="main__message"> На ПС я поступил, чтобы получить фундаментальные зания о строение, архитектуре и
+            разработке программ. Огромным плюсом этого направления является то, что большинство преподавателей
+            программирования непосредственно разрабатывают программы в компаниях города</p>
+        <h2 calss="main__theme-header">Зачем мне нужна весеняя практика</h2>
+        <p class="main__message"> Я хочу получить новые знания и самое главное на основе этой базы решить реальную
+            задачу</p>
+        <a href="https://vk.com/efedoseev99" class="">Моя страница</a>
     </div>
     <div class="pictures">
-      <div class="pictures__gallery gallery">
+        {% for hobbie in hobbies %}
+            <div class="pictures__gallery gallery">
+                <h3 class="gallery__name">{{ hobbie.name }}</h3>
+                <div class="gallery__images images images_{{ loop.index }}">
+                    <ul class="images__slidewrapper slidewrapper slidewrapper_{{ loop.index }}">
+                        {% for image in hobbie.images %}
+                            <li class="slidewrapper__slide slide">
+                                <img src="{{ image }}" alt="wasn't finded" class="slide__photo"/>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="prev-next-btns">
+                    <div class="prev-btn prev-btn_1"></div>
+                    <div class="next-btn next-btn_1"></div>
+                </div>
+                <ul class="nav-btns ">
+                    {% for i in 1..5 %}
+                        <li class="slide-nav-btn slide-nav-btn_{{ loop.index }}"></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        {% endfor %}
+        {# <div class="pictures__gallery gallery">
         <h3 class="gallery__name">Basketball</h3>
         <div class="gallery__images images images_1">
           <ul class="images__slidewrapper slidewrapper slidewrapper_1">
@@ -56,7 +88,7 @@
         </div>
         <div class="prev-next-btns">
           <div class="prev-btn prev-btn_2"></div>
-          <div class="next-btn next-btn_2"></div>
+        next-btn next-btn_2"></div>
         </div>
         <ul class="nav-btns ">
           <li class="slide-nav-btn slide-nav-btn_2"></li>
@@ -87,11 +119,8 @@
           <li class="slide-nav-btn slide-nav-btn_3"></li>
           <li class="slide-nav-btn slide-nav-btn_3"></li>
         </ul>
-      </div>
+      </div> #}
     </div>
-
-    <script type="text/javascript" src="{{ asset('build/about_me.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('build/vendors-node_modules_core-js_modules_web_timers_js-node_modules_jquery_dist_jquery_js.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('build/runtime.js') }}"></script>
+{# {{ encore_entry_script_tags('about_me') }} #}
 
 {% endblock %}

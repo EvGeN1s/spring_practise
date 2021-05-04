@@ -1,8 +1,7 @@
 <?php
 
 
-namespace App\Modules;
-
+namespace App\Modules\AboutMe;
 
 
 interface ImageProviderInterface

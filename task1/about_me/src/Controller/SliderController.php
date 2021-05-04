@@ -14,8 +14,8 @@ class SliderController extends AbstractController
     {
         $basketballImages = new ImageProvider();
 
-        return $this->render('/about-me/slider.html.twig',[
-            'urls' => $basketballImages -> getUrls('basketball'),
+        return $this->render('/about-me/slider.html.twig', [
+            'urls' => $basketballImages->getUrls('basketball'),
         ]);
     }
 }
