@@ -3,10 +3,10 @@
 
 namespace App\Controller;
 
+use App\Modules\AboutMe\Infrastructure\ImageProvider;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-use App\Modules\ImageProvider;
 
 class SliderController extends AbstractController
 {

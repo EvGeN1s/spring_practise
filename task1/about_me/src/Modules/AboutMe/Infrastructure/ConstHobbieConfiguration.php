@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Modules\AboutMe\Infrasrtucture;
+namespace App\Modules\AboutMe\Infrastructure;
 
 
 use App\Modules\AboutMe\App\HobbieConfigurationInterface;

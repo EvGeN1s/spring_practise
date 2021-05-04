@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\View;
+namespace App\View\AboutMe;
 
 
 use Symfony\Component\HttpFoundation\Response;

@@ -4,10 +4,10 @@
 namespace App\Modules\AboutMe\App;
 
 use App\Modules\AboutMe\App\HobbieConfigurationInterface;
-use App\Modules\AboutMe\Infrasrtucture\ConstHobbieConfiguration;
+use App\Modules\AboutMe\Infrastructure\ConstHobbieConfiguration;
 use App\Modules\AboutMe\Model\Hobbie;
-use App\Modules\ImageProvider;
-use App\Modules\ImageProviderInterface;
+use App\Modules\AboutMe\Infrastructure\ImageProvider;
+use App\Modules\AboutMe\App\ImageProviderInterface;
 
 
 
@@ -23,6 +23,7 @@ class HobbieService
         $hobbies = [];
         foreach ($this->hobbieMap as $name => $keyword)
         {
+
            $images = ImageProvider::getUrls($keyword);
            $hobbie = new Hobbie($keyword, $name, $images);
            $hobbies += $hobbie;
