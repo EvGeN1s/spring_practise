@@ -44,8 +44,8 @@
                     </ul>
                 </div>
                 <div class="prev-next-btns">
-                    <div class="prev-btn prev-btn_1"></div>
-                    <div class="next-btn next-btn_1"></div>
+                    <div class="prev-btn prev-btn_{{ loop.index }}"></div>
+                    <div class="next-btn next-btn_{{ loop.index }}"></div>
                 </div>
                 <ul class="nav-btns ">
                     {% for i in 1..5 %}
@@ -53,74 +53,8 @@
                     {% endfor %}
                 </ul>
             </div>
-
         {% endfor %}
-        {# <div class="pictures__gallery gallery">
-        <h3 class="gallery__name">Basketball</h3>
-        <div class="gallery__images images images_1">
-          <ul class="images__slidewrapper slidewrapper slidewrapper_1">
-          {% for url in urlsB %}
-            <li class="slidewrapper__slide slide"><img src="{{ url }}" alt="wasn't finded" class="slide__photo"/></li>
-          {% endfor %}
-          </ul>
-        </div>
-        <div class="prev-next-btns">
-          <div class="prev-btn prev-btn_1"></div>
-          <div class="next-btn next-btn_1"></div>
-        </div>
-        <ul class="nav-btns ">
-          <li class="slide-nav-btn slide-nav-btn_1"></li>
-          <li class="slide-nav-btn slide-nav-btn_1"></li>
-          <li class="slide-nav-btn slide-nav-btn_1"></li>
-          <li class="slide-nav-btn slide-nav-btn_1"></li>
-          <li class="slide-nav-btn slide-nav-btn_1"></li>
-        </ul>
-      </div>
-
-      <div class="pictures__gallery gallery">
-        <h3 class="gallery__name">Programming</h3>
-        <div class="gallery__images images images_2">
-            <ul class="images__slidewrapper slidewrapper slidewrapper_2">
-            {% for url in urlsP %}
-                <li class="slidewrapper__slide slide"><img src="{{ url }}" alt="wasn't finded" class="slide__photo"/></li>
-            {% endfor %}
-            </ul>
-        </div>
-        <div class="prev-next-btns">
-          <div class="prev-btn prev-btn_2"></div>
-        next-btn next-btn_2"></div>
-        </div>
-        <ul class="nav-btns ">
-          <li class="slide-nav-btn slide-nav-btn_2"></li>
-          <li class="slide-nav-btn slide-nav-btn_2"></li>
-          <li class="slide-nav-btn slide-nav-btn_2"></li>
-          <li class="slide-nav-btn slide-nav-btn_2"></li>
-          <li class="slide-nav-btn slide-nav-btn_2"></li>
-        </ul>
-      </div>
-
-      <div class="pictures__gallery gallery">
-        <h3 class="gallery__name">Computer gaming</h3>
-        <div class="gallery__images images images_3">
-            <ul class="images__slidewrapper slidewrapper slidewrapper_3">
-            {% for url in urlsC %}
-                <li class="slidewrapper__slide slide"><img src="{{ url }}" alt="wasn't finded" class="slide__photo"/></li>
-            {% endfor %}
-            </ul>
-        </div>
-        <div class="prev-next-btns">
-          <div class="prev-btn prev-btn_3"></div>
-          <div class="next-btn next-btn_3"></div>
-        </div>
-        <ul class="nav-btns nav-btns_3">
-          <li class="slide-nav-btn slide-nav-btn_3"></li>
-          <li class="slide-nav-btn slide-nav-btn_3"></li>
-          <li class="slide-nav-btn slide-nav-btn_3"></li>
-          <li class="slide-nav-btn slide-nav-btn_3"></li>
-          <li class="slide-nav-btn slide-nav-btn_3"></li>
-        </ul>
-      </div> #}
     </div>
-{# {{ encore_entry_script_tags('about_me') }} #}
+{{ encore_entry_script_tags('about_me') }}
 
 {% endblock %}

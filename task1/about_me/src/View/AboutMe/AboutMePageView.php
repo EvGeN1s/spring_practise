@@ -15,6 +15,6 @@ class AboutMePageView
 
     public function buildParams(string $templateName): array
     {
-      return ["hobies" => $this->hobbies];
+      return ["hobbies" => $this->hobbies];
     }
 }
