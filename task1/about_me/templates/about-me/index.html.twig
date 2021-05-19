@@ -32,10 +32,11 @@
     </div>
     <div class="pictures">
         {% for hobbie in hobbies %}
+            {% set count = loop.index %}
             <div class="pictures__gallery gallery">
                 <h3 class="gallery__name">{{ hobbie.name }}</h3>
-                <div class="gallery__images images images_{{ loop.index }}">
-                    <ul class="images__slidewrapper slidewrapper slidewrapper_{{ loop.index }}">
+                <div class="gallery__images images images_{{ count }}">
+                    <ul class="images__slidewrapper slidewrapper slidewrapper_{{ count }}">
                         {% for image in hobbie.images %}
                             <li class="slidewrapper__slide slide">
                                 <img src="{{ image }}" alt="wasn't finded" class="slide__photo"/>
@@ -44,12 +45,12 @@
                     </ul>
                 </div>
                 <div class="prev-next-btns">
-                    <div class="prev-btn prev-btn_{{ loop.index }}"></div>
-                    <div class="next-btn next-btn_{{ loop.index }}"></div>
+                    <div class="prev-btn prev-btn_{{ count }}"></div>
+                    <div class="next-btn next-btn_{{ count }}"></div>
                 </div>
                 <ul class="nav-btns ">
                     {% for i in 1..5 %}
-                        <li class="slide-nav-btn slide-nav-btn_{{ loop.index }}"></li>
+                        <li class="slide-nav-btn slide-nav-btn_{{ count }}"></li>
                     {% endfor %}
                 </ul>
             </div>

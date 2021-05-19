@@ -9,8 +9,8 @@ use App\Modules\AboutMe\App\HobbieConfigurationInterface;
 class ConstHobbieConfiguration implements HobbieConfigurationInterface
 {
     const HOBBIE_MAP = ["basketball" => "basketball",
-        "programming" => "js|html|css|php|c",
-        "computer games" => "theWithcer|cs-go|metro2033|Rainbow6|FarCry",
+        "programming" => "js|html|css|php|c+programming",
+        "computer games" => "theWithcer|metro2033|Rainbow6|FarCry",
     ];
 
     public function getHobbieMap(): array
