@@ -15,13 +15,12 @@ export default class Slider {
     this._slideCount = $(this.slidewrapper).children().length;
     this._slideInterval = 3000;
     this._navBtnId = 0;
-    //this._translateWidth = 0;
   }
 
   initialize() {
     this.switchInterval = setInterval(this.nextSlide.bind(this), this._slideInterval);
 
-    $(this.viewport).hover( () => {
+    $(this.viewport).hover(() => {
       clearInterval(this.switchInterval);
     }, () => {
       this.switchInterval = setInterval(this.nextSlide.bind(this), this._slideInterval);
@@ -71,18 +70,18 @@ export default class Slider {
   }
 
   setNavBtn() {
-    const self = this;
+    const SELF = this;
     $(this.slideNavBtn).click(function () {
       let translateWidth;
-      self._navBtnId = $(this).index();
-      if (self._navBtnId + 1 !== self._slideNow) {
-        translateWidth = -$(self.viewport).width() * (self._navBtnId);
-        $(self.slidewrapper).css({
+      SELF._navBtnId = $(this).index();
+      if (SELF._navBtnId + 1 !== SELF._slideNow) {
+        translateWidth = -$(SELF.viewport).width() * (SELF._navBtnId);
+        $(SELF.slidewrapper).css({
           'transform': 'translate(' + translateWidth + 'px, 0)',
           '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
           '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
         });
-        self._slideNow = self._navBtnId + 1;
+        SELF._slideNow = SELF._navBtnId + 1;
       }
     });
   }

@@ -1,10 +1,6 @@
 <?php
 
-
 namespace App\View\AboutMe;
-
-
-use Symfony\Component\HttpFoundation\Response;
 
 class AboutMePageView
 {
@@ -15,6 +11,6 @@ class AboutMePageView
 
     public function buildParams(string $templateName): array
     {
-      return ["hobbies" => $this->hobbies];
+        return ["hobbies" => $this->hobbies];
     }
 }

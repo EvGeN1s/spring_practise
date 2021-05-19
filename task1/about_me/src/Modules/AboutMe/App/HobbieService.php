@@ -3,14 +3,7 @@
 
 namespace App\Modules\AboutMe\App;
 
-use App\Modules\AboutMe\App\HobbieConfigurationInterface;
-use App\Modules\AboutMe\App\ImageProviderInterface;
-use App\Modules\AboutMe\Infrastructure\ConstHobbieConfiguration;
 use App\Modules\AboutMe\Model\Hobbie;
-use App\Modules\AboutMe\Infrastructure\ImageProvider;
-
-
-
 
 class HobbieService
 {
