@@ -85,8 +85,6 @@ export default class Slider {
       }
     });
   }
-
-
 }
 
 
