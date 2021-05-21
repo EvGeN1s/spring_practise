@@ -24,9 +24,12 @@ class AboutMeController extends AbstractController
         return $this->render('/about-me/index.html.twig', $view->buildParams('/about-me/index.html.twig'));
     }
 
-    public function updateImages(HobbieService $hobbieService, Request $request)
+    public function updateImages(HobbieService $hobbieService, Request $request): Response
     {
-        $hobbieService->updateHobbies();
+
+        $hobbieService->updateHobbies($request->request->get('keyword') ?? null);
+        return new Response('OK');
+
 
     }
 }

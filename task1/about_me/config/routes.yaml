@@ -2,6 +2,6 @@ page:
   path: /
   controller: App\Controller\AboutMeController::page
 
-slider:
-  path: /slider
-  controller: App\Controller\SliderController::slider
+update:
+  path: /update
+  controller: App\Controller\AboutMeController::updateImages

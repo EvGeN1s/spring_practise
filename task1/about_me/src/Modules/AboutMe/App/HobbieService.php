@@ -22,21 +22,21 @@ class HobbieService
     {
         $hobbies = [];
 
-        foreach ($this->hobbieMap as $name => $keyword)
+        foreach ($this->hobbieMap as $name => $keywords)
         {
             $urls = [];
-            $images = $this->imageRepository->getImages($keyword);
+            $images = $this->imageRepository->getImages($name);
             if ($images === null)
             {
-                $this->updateHobbies($keyword);
-                $images = $this->imageRepository->getImages($keyword);
+                $this->updateHobbies($name);
+                $images = $this->imageRepository->getImages($name);
             }
 
-            foreach ($images as $image)
+            if($images) foreach ($images as $image)
             {
                 array_push($urls, $image->getUrl());
             }
-            $hobbie = new Hobbie($keyword, $name, $urls);
+            $hobbie = new Hobbie($keywords, $name, $urls);
             array_push($hobbies, $hobbie);
         }
         return $hobbies;
