@@ -1,4 +1,3 @@
-``
 import '../../about_me.css';
 import $ from 'jquery';
 
@@ -8,7 +7,7 @@ export default class Slider {
     this.slidewrapper = slidewrapper;
     this.viewport = viewport;
     this.nextBtn = nextBtn;
-    this.prevBtn = prevBtn
+    this.prevBtn = prevBtn;
     this.slideNavBtn = slideNavBtn;
 
     this._slideNow = 1;
@@ -70,22 +69,21 @@ export default class Slider {
   }
 
   setNavBtn() {
-    const SELF = this;
+    const self = this;
     $(this.slideNavBtn).click(function () {
       let translateWidth;
-      SELF._navBtnId = $(this).index();
-      if (SELF._navBtnId + 1 !== SELF._slideNow) {
-        translateWidth = -$(SELF.viewport).width() * (SELF._navBtnId);
-        $(SELF.slidewrapper).css({
+      self._navBtnId = $(this).index();
+      if (self._navBtnId + 1 !== self._slideNow) {
+        translateWidth = -$(self.viewport).width() * (self._navBtnId);
+        $(self.slidewrapper).css({
           'transform': 'translate(' + translateWidth + 'px, 0)',
           '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
           '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
         });
-        SELF._slideNow = SELF._navBtnId + 1;
+        self._slideNow = self._navBtnId + 1;
       }
     });
   }
 }
 
 
-``
