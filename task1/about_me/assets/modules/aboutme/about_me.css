@@ -27,7 +27,8 @@ body
 .pictures
 {
     display: flex;
-    margin-left: 10%;
+    margin-left: 13%;
+    margin-bottom: 5%;
 }
 
 .gallery
@@ -39,6 +40,7 @@ body
 
 .gallery__name
 {
+    text-transform: uppercase;
     text-align: center;
     width: 50%;
 }
@@ -70,6 +72,7 @@ body
     -webkit-transition-timing-function: ease-in-out;
     -o-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
+
 }
 
 .slide
@@ -121,7 +124,7 @@ body
 .nav-btns
 {
     position: absolute;
-    bottom: 20px;
+    bottom: 90px;
     left: 80px;
     padding: 0;
     margin: 0;
@@ -142,6 +145,32 @@ body
 
 .slide-nav-btn:hover
 {
+    cursor: pointer;
+}
+
+.gallery__updater
+{
+    display: block;
+    font: 19px/32px "Georgia";
+    color: #fff;
+    background-color: #15a98c;
+    margin: 44px 0 0 0;
+    padding: 5px 42px 5px 43px;
+    border: 0 solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#updater
+{
+    display: block;
+    font: 19px/32px "Georgia";
+    color: #fff;
+    background-color: #15a98c;
+    margin: 44px auto 0;
+    padding: 9px 62px 9px 63px;
+    border: 0 solid #000;
+    border-radius: 5px;
     cursor: pointer;
 }
 
