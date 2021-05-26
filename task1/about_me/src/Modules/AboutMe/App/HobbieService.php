@@ -42,9 +42,9 @@ class HobbieService
         return $hobbies;
     }
 
-    public function updateHobbies(string $keyword = null)
+    public function updateHobbies(string $keyword = '')
     {
-        if ( $keyword === null)
+        if ( $keyword === '')
         {
             foreach ($this->hobbieMap as $name => $keywords)
             {

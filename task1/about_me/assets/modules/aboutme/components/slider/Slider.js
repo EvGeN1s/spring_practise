@@ -1,7 +1,6 @@
 import '../../about_me.css';
 import $ from 'jquery';
 
-
 export default class Slider {
   constructor(slidewrapper, viewport, nextBtn, prevBtn, slideNavBtn) {
     this.slidewrapper = slidewrapper;

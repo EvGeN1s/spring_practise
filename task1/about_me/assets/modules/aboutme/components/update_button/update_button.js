@@ -1,24 +1,16 @@
 import './update_button.css';
 
-
-export function setUpdateButton(btn) {
-
-
-  const UPDATE_BUTTON = document.getElementsByClassName(btn)
-
-  UPDATE_BUTTON.addEventListener('click', async () => {
-    const request = await fetch('/update', {
-      method: 'POST',
-      body: JSON.stringify({})
-    });
-
+export default function setUpdateButton(btn) {
+  const updateButton = document.getElementById(btn);
+  console.log('hey');
+  updateButton.addEventListener('click', async () => {
+    const request = await fetch('/update');
     let result = await request;
-
-    if (result.status === 200) {
-      location.reload();
+    if (result.ok)
+    {
+      document.location.reload(true);
     } else {
-      alert("Something go wrong. Images wasn't finded");
+      alert("Something go wrong. Images wasn't found");
     }
-
   })
 }

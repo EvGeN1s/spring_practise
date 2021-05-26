@@ -26,10 +26,8 @@ class AboutMeController extends AbstractController
 
     public function updateImages(HobbieService $hobbieService, Request $request): Response
     {
-
-        $hobbieService->updateHobbies($request->request->get('keyword') ?? null);
+        $hobbieService->updateHobbies($request->request->get('keyword') ?? '');
         return new Response('OK');
-
 
     }
 }

@@ -10,7 +10,7 @@ class ConstHobbieConfiguration implements HobbieConfigurationInterface
 {
     const HOBBIE_MAP = ["basketball" => "basketball",
         "programming" => "js|html|css|php|c+programming",
-        "computer games" => "theWithcer|metro2033|Rainbow6|FarCry",
+        "computer games" => "theWitcher|metro2033|Rainbow6|FarCry",
     ];
 
     public function getHobbieMap(): array
