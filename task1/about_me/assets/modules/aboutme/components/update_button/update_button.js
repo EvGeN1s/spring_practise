@@ -1,16 +1,20 @@
 import './update_button.css';
+import $ from 'jquery';
 
-export default function setUpdateButton(btn) {
-  const updateButton = document.getElementById(btn);
-  console.log('hey');
-  updateButton.addEventListener('click', async () => {
-    const request = await fetch('/update');
-    let result = await request;
-    if (result.ok)
-    {
-      document.location.reload(true);
-    } else {
-      alert("Something go wrong. Images wasn't found");
-    }
-  })
+export default function setUpdateButton(button) {
+  const btn = $(button);
+
+  btn.click(() => {
+    $.ajax({
+      url: '/update',
+      method: 'POST',
+    })
+      .done(() => {
+        location.reload();
+      })
+      .fail(() => {
+        alert('error: iamge\'s can\'t  be updated');
+      });
+  });
+
 }

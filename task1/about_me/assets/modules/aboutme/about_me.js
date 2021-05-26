@@ -2,7 +2,8 @@ import './about_me.css';
 import $ from 'jquery';
 
 import Slider from "./components/slider/Slider";
-//import setUpdateButton from "./components/update_button/update_button";
+import setUpdateButton from "./components/update_button/update_button";
+import setThemeUpdateButton from "./components/theme-update-button/theme-update-button";
 
 const slider1 = new Slider(".slidewrapper_1", ".images_1",
   ".next-btn_1", ".prev-btn_1", ".slide-nav-btn_1"
@@ -15,9 +16,12 @@ const slider3 = new Slider(".slidewrapper_3", ".images_3",
 );
 
 $(document).ready(function () {
-
   slider1.initialize();
   slider2.initialize();
   slider3.initialize();
-  //setUpdateButton('updater');
+  setUpdateButton('#updater');
+  setThemeUpdateButton('#theme-updater_1', 'basketball');
+  setThemeUpdateButton('#theme-updater_2', 'programming');
+  setThemeUpdateButton('#theme-updater_3', 'computer games');
+
 })

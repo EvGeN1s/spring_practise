@@ -40,24 +40,25 @@
                     <ul class="images__slidewrapper slidewrapper slidewrapper_{{ count }}">
                         {% for image in hobbie.images %}
                             <li class="slidewrapper__slide slide">
-                                <img src="{{ image }}" alt="wasn't finded" class="slide__photo"/>
+                                <img src="{{ image }}" alt="wasn't founded" class="slide__photo"/>
                             </li>
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="prev-next-btns">
+                <div class="gallery__prev-next-btns prev-next-btns">
                     <div class="prev-btn prev-btn_{{ count }}"></div>
                     <div class="next-btn next-btn_{{ count }}"></div>
                 </div>
-                <ul class="nav-btns ">
+                <ul class="gallery__nav-btns nav-btns ">
                     {% for i in 1..5 %}
                         <li class="slide-nav-btn slide-nav-btn_{{ count }}"></li>
                     {% endfor %}
                 </ul>
+                <button class="gallery__updater" id="theme-updater_{{ count }}">Обновить изображения </button>
             </div>
         {% endfor %}
     </div>
-    <button id="updater"> Обновить картинки</button>
+    <button id="updater"> Обновить все изображения</button>
 {{ encore_entry_script_tags('about_me') }}
 
 {% endblock %}
