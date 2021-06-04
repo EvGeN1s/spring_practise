@@ -34,9 +34,12 @@ class ImageRepository implements ImageRepositoryInterface
     public function getImages(string $keyword): ?array
     {
         $images = $this->repository->findBy(['keyword' => $keyword]);
-        if (empty($images)) {
+        if (empty($images))
+        {
             return null;
-        } else {
+        }
+        else
+        {
             return $images;
         }
     }

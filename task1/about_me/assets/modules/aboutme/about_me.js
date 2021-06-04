@@ -3,7 +3,7 @@ import $ from 'jquery';
 
 import Slider from "./components/slider/Slider";
 import setUpdateButton from "./components/update_button/update_button";
-import setThemeUpdateButton from "./components/theme-update-button/theme-update-button";
+import setThemeUpdateButton from "./components/theme_update_button/theme_update_button";
 
 const slider1 = new Slider(".slidewrapper_1", ".images_1",
     ".next-btn_1", ".prev-btn_1", ".slide-nav-btn_1"
