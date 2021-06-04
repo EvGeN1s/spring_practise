@@ -1,4 +1,4 @@
-import './theme-update-button.css';
+import './theme_update_button.css';
 import $ from 'jquery';
 
 export default function setThemeUpdateButton(button, keyword) {
