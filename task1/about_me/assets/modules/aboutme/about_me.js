@@ -16,12 +16,11 @@ const slider3 = new Slider(".slidewrapper_3", ".images_3",
 );
 
 $(document).ready(function () {
-  slider1.initialize();
-  slider2.initialize();
-  slider3.initialize();
-  setUpdateButton('#updater');
-  setThemeUpdateButton('#theme-updater_1', 'basketball');
-  setThemeUpdateButton('#theme-updater_2', 'programming');
-  setThemeUpdateButton('#theme-updater_3', 'computer games');
-
+    slider1.initialize();
+    slider2.initialize();
+    slider3.initialize();
+    setUpdateButton('#updater');
+    setThemeUpdateButton('#theme-updater_1', 'basketball');
+    setThemeUpdateButton('#theme-updater_2', 'programming');
+    setThemeUpdateButton('#theme-updater_3', 'computer games');
 })

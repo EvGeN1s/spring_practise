@@ -8,8 +8,8 @@ class Hobbie
 {
     private string $keyword;
     private string $name;
-    private array $images;
-    public function __construct(string $keyword, string $name,array $images)
+    private array $images; /*Array of string*/
+    public function __construct(string $keyword, string $name, array $images /*Array of string*/)
     {
         $this->keyword = $keyword;
         $this->name = $name;

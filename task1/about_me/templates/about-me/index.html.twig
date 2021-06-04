@@ -35,10 +35,10 @@
         {% for hobbie in hobbies %}
             {% set count = loop.index %}
             <div class="pictures__gallery gallery">
-                <h3 class="gallery__name">{{ hobbie.name }}</h3>
+                <h3 class="gallery__name">{{ hobbie.getName }}</h3>
                 <div class="gallery__images images images_{{ count }}">
                     <ul class="images__slidewrapper slidewrapper slidewrapper_{{ count }}">
-                        {% for image in hobbie.images %}
+                        {% for image in hobbie.getImages %}
                             <li class="slidewrapper__slide slide">
                                 <img src="{{ image }}" alt="wasn't founded" class="slide__photo"/>
                             </li>
